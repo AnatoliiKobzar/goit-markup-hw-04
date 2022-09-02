@@ -6,6 +6,7 @@
   --main-background-color: #ffffff;
   --secondary-background-color: #2f303a;
   --background-button-color: #f5f4fa;
+  --fill-icon: #afb1b8;
 }
 
 body {
@@ -53,6 +54,8 @@ img {
 /* Стилизация логотипа */
 
 .logo-main {
+  padding-top: 24px;
+  padding-bottom: 25px;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
@@ -88,7 +91,9 @@ img {
 }
 
 .contact-link {
-  display: block;
+  display: flex;
+  gap: 10px;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -137,6 +142,10 @@ img {
   align-items: center;
 }
 
+.contacts-icon {
+  fill: currentColor;
+}
+
 /* Стилизация main */
 
 /* Герой */
@@ -147,8 +156,17 @@ img {
 }
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  border: 1px solid #000000;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/background/hero-bg.jpg);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   background-color: var(--secondary-background-color);
   text-align: center;
 }
@@ -232,6 +250,17 @@ img {
   margin-left: 30px;
 }
 
+.advantage-countainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 120px;
+  background: var(--background-button-color);
+  border-radius: 4px;
+}
+
 /* Чем мы занимаемся */
 
 .section-title {
@@ -288,6 +317,7 @@ img {
 }
 
 .job-title {
+  margin-bottom: 16px;
   color: var(--secondary-font-color);
   font-size: 16px;
   line-height: 1.19;
@@ -297,6 +327,66 @@ img {
 .team-container {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  background-color: var(--accent-color);
+}
+
+.team-contacts-icon {
+  fill: var(--fill-icon);
+}
+
+.socials-link:hover .team-contacts-icon,
+.socials-link:focus .team-contacts-icon {
+  fill: var(--main-background-color);
+}
+
+.socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Постоянные клиенты */
+
+.client-list {
+  display: flex;
+  gap: 30px;
+}
+
+.client-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--fill-icon);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.client-icon {
+  fill: var(--fill-icon);
+}
+
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--accent-color);
 }
 
 /* Стилизация футера */
@@ -334,6 +424,29 @@ img {
 
 .list .address-item:last-child {
   margin-bottom: 0;
+}
+
+.link-title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+}
+
+.footer-socials-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-contacts-icon {
+  fill: var(--main-background-color);
+}
+
+.footer-container {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
 }
 
 /* Стилизация portfolio.html */
@@ -414,4 +527,9 @@ img {
 .examples-item {
   margin-top: 30px;
   margin-left: 30px;
+}
+
+.examples-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
