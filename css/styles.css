@@ -54,8 +54,6 @@ img {
 /* Стилизация логотипа */
 
 .logo-main {
-  padding-top: 24px;
-  padding-bottom: 25px;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-size: 26px;
